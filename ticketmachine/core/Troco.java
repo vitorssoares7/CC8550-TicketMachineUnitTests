@@ -1,4 +1,4 @@
-package br.calebe.ticketmachine.core;
+package ticketmachine.core;
 
 import java.util.Iterator;
 
@@ -12,23 +12,37 @@ class Troco {
 
     public Troco(int valor) {
 
-        public boolean CountPapelMoeda(int nota, int valor) {
-            int count = 0;
-
-            while (valor % nota != 0) {
-                count++;
-            }
-
-            return count;
-        }
-
-        protected int[] papelMoeda = {2, 5, 10, 20, 50, 100};
         papeisMoeda = new PapelMoeda[6];
-
-        for(int i=5, i>=0, i--){
-            int count = CountPapelMoeda(papelMoeda[i], valor)
-            papeisMoeda[i] = new PapelMoeda(papelMoeda[i], count);
+        int count = 0;
+        while (valor % 100 != 0) {
+            count++;
         }
+        papeisMoeda[5] = new PapelMoeda(100, count);
+        count = 0;
+        while (valor % 50 != 0) {
+            count++;
+        }
+        papeisMoeda[4] = new PapelMoeda(50, count);
+        count = 0;
+        while (valor % 20 != 0) {
+            count++;
+        }
+        papeisMoeda[3] = new PapelMoeda(20, count);
+        count = 0;
+        while (valor % 10 != 0) {
+            count++;
+        }
+        papeisMoeda[2] = new PapelMoeda(10, count);
+        count = 0;
+        while (valor % 5 != 0) {
+            count++;
+        }
+        papeisMoeda[1] = new PapelMoeda(5, count);
+        count = 0;
+        while (valor % 2 != 0) {
+            count++;
+        }
+        papeisMoeda[1] = new PapelMoeda(2, count);
     }
 
     public Iterator<PapelMoeda> getIterator() {
@@ -41,6 +55,12 @@ class Troco {
 
         public TrocoIterator(Troco troco) {
             this.troco = troco;
+        }
+
+        @Override
+        public boolean hasNext() {
+            boolean zero = true;
+            return zero;
         }
 
         @Override
