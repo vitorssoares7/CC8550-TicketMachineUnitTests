@@ -18,8 +18,8 @@
         </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>./src/br</sourceDirectory>
-        <testSourceDirectory>./src/tests</testSourceDirectory>
+        <sourceDirectory>./ticketmachine</sourceDirectory>
+        <testSourceDirectory>./ticketmachine</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
