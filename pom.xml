@@ -19,7 +19,7 @@
     </dependencies>
     <build>
         <sourceDirectory>./ticketmachine</sourceDirectory>
-        <testSourceDirectory>./ticketmachine</testSourceDirectory>
+        <testSourceDirectory>./ticketmachine/tests</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
