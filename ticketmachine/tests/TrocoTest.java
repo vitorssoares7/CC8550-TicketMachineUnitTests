@@ -1,3 +1,6 @@
+// Adicionado timeout ao teste para que ele não fique preso em um loop infinito uma vez que 
+// o construtor da classe troco não está funcionando corretamente
+
 package ticketmachine.tests;
 
 import org.junit.Assert;
